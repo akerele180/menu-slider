@@ -5,11 +5,12 @@
 }
 body {
   font-family: "Lato", sans-serif;
+  transition: transform 0.6s ease;
 }
 :root {
   --mainColor: #30336b;
   --subColor: #be2edd;
-  --duration: 1s;
+  --duration: 5s;
 }
 nav {
   background-color: var(--mainColor);
@@ -100,6 +101,7 @@ input[type="submit"] {
   background-color: #00000099;
   height: 100vh;
   display: none;
+  transition: transform 0.6s ease;
 }
 .modal-container.show-modal {
   display: block;
@@ -120,6 +122,8 @@ form label {
   width: 380px;
   border-radius: 5px;
   box-shadow: 3px 5px 3px 0px #000000ad;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
 }
 .modal button {
   float: right;
@@ -143,9 +147,6 @@ body.show-nav {
 }
 .close-btn {
   background: transparent;
-  /* position: absolute;
-  top: 0;
-  right: 0; */
   font-size: 25px;
 }
 .modal-header h3 {
