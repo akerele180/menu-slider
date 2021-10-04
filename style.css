@@ -99,8 +99,11 @@ input[type="submit"] {
   bottom: 0;
   background-color: #00000099;
   height: 100vh;
-  display: grid;
   display: none;
+}
+.modal-container.show-modal {
+  display: block;
+  display: grid;
   place-items: center;
 }
 .modal-container p {
@@ -135,12 +138,28 @@ form input {
   outline: none;
   border: 1px solid #dddddd;
 }
+body.show-nav {
+  transform: translateX(200px);
+}
 .close-btn {
   background: transparent;
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+  font-size: 25px;
 }
 .modal-header h3 {
   background-color: var(--mainColor);
   color: #fff;
   line-height: 2.5rem;
   padding: 7px 15px;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
